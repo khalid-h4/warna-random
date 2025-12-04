@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warna Random</title>
+    <title>Warna Teks</title>
 
 <style>
     body {
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         padding: 60px;
-        transition: background-color 0.5s ease;
     }
 
     button {
@@ -23,25 +22,16 @@
 
 <body>
 
-<h1 id="judul">Ubah Random Background</h1>
+<h1 id="judul">Ubah Warna Teks</h1>
 
 <input type="color" id="customColor">
-<br><br>
-
-<button onclick="ubahWarna()">Klik Untuk Ganti Warna</button>
 
 <script>
 
-
+// Ubah warna teks sesuai color picker
 document.getElementById("customColor").addEventListener("input", function(e){
-    document.body.style.backgroundColor = e.target.value;
+    document.getElementById("judul").style.color = e.target.value;
 });
-
-
-function ubahWarna() {
-    let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = randomColor;
-}
 
 </script>
 
