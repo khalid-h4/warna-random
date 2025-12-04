@@ -23,18 +23,19 @@
       
 <h1 id="judul">Ubah Random Background</h1>
 
-    <input type="color" id="pickerWarna"≥ 
-    
+    <input type="color" id="customColor">
+
 <button onclick="ubahWarna">Klik Untuk Ganti Warna</button>
 
 <script>
 function ubahWarna() {
-            let warna = document.getElementById("pickerWarna").value;
-            document.getElementById("judul").style.color = warna;
-}
+            let warna = document.getElementById("customColor").addEventListener("input", function(e){
+    document.body.style.background = e.target.value;
+});
 
 </script>
 
 </body>
 
 </html>
+
